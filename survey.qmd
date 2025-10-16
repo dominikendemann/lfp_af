@@ -1,0 +1,95 @@
+---
+format: html
+echo: false
+warning: false
+footer-left: "Made with [surveydown](https://surveydown.org)"
+footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/templates)'
+---
+
+```{r}
+library(surveydown)
+```
+
+::: {.sd_page id=welcome}
+
+# Abfrage erster Rahmenbedingungen
+
+
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "name1",
+  label = "Bitte geben Sie hier Ihren Vornamen ein"
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "name2",
+  label = "Bitte geben Sie hier Ihren Nachnamen ein"
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'seminar',
+  label = "Welches der LFP-Seminare bei Dominik Endemann besuchen Sie?",
+  option = c(
+    'LFP 124___ - Montag 14-16 Uhr'    = '1',
+    'LFP 124___ - Donnerstag 14-16 Uhr' = '2'
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'klassenstufe',
+  label = "Ich kann die Daten in einer **3., 4. oder 5. Klasse** erheben",
+  option = c(
+    'ja'    = 'ja',
+    'nein' = 'nein'
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'erhebungsdatum',
+  label = "Ich kann meine Datenerhebung voraussichtlich durchführen ...",
+  option = c(
+    'bis Ende November 2025'    = 'nov',
+    'bis Dezember 2025' = 'dez'
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'tandem',
+  label = "Haben Sie eine/n Tandempartner/in in diesem Kurs? Wenn ja: Schreiben Sie den Vor- und Nachnamen in das nächste Antwortfeld.",
+  option = c(
+    'ja'    = 'ja',
+    'nein' = 'nein'
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "text",
+  id    = "name_tandem",
+  label = "Vor- und Nachname der Tandemperson:"
+)
+```
+
+
+```{r}
+sd_close()
+```
+:::
