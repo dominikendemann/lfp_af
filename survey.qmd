@@ -88,8 +88,17 @@ sd_question(
 )
 ```
 
+```{r}
+sd_question(
+  type  = "text",
+  id    = "daten",
+  label = "Ich habe im Rahmen des Praxissemesters schon Leistungsdaten erhoben / Zugriff auf Leistungsdaten (z.B. VERA-3, LAUBE, ILEA, etc.)"
+)
+```
+
 
 ```{r}
 sd_close()
 ```
 :::
+
